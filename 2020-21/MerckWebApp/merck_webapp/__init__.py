@@ -1,18 +1,22 @@
-
 import boto3
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from config import S3_KEY, S3_SECRET
+#from flask_mysqldb import MySQL
+# import yaml
 
 #create connection to the SQL database
-# conn = "mysql+pymysql://{0}:{1}@{2}:{3}/{4}".format(
-#     'USERNAME', 'PASSWORD', 'NAME OF DATABASE', 'PORT NUMBER', 'TABLE NAME')
+#conn = "mysql+pymysql://{0}:{1}@{2}:{3}/{4}".format(
+#    'USERNAME', 'PASSWORD', 'NAME OF DATABASE', 'PORT NUMBER', 'TABLE NAME')
+conn = "mysql+pymysql://{0}:{1}@{2}/{3}".format('root', 'database', 'localhost', 'webappdb')
+
+#conn = "mysql+pymysql://{0}:{1}@{2}/{3}".format('username', 'password', 'port', 'name of database')
 
 #initialize Flask application
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = 'SECRET KEY' #secret key is used to keep the client-side sessions secure, generated randomly 
+app.config['SECRET_KEY'] = 'SECRET KEY' #secret key is used to keep the client-side sessions secure, generated randomly 
 app.config['SQLALCHEMY_DATABASE_URI'] = conn #configure the SQLAlchemy database connection to specified db
 db = SQLAlchemy(app) #initialize SQLAlchemy as part of the Flask application
 

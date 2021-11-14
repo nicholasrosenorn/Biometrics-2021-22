@@ -145,6 +145,10 @@ def patients():
 def visualizations():
     return render_template('visualizations.html')
 
+@app.route("/profile")
+@login_required
+def profile():
+    return render_template('profile.html', user=current_user, email=current_user.email, password = current_user.password) 
 
 @app.route("/edit_account", methods=['GET', 'POST'])
 @login_required
