@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request
-from merck_webapp.forms import PatientInformation, OngoingStudyData, LogIn, CreateAccount, UpdateAccount
+from merck_webapp.forms import PatientInformation, OngoingStudyData, LogIn, CreateAccount, UpdateAccount, ForgetPassword
 from merck_webapp import app, db, bcrypt
 from merck_webapp.models import patient, study_specific_data, users, phone_app_data, fitbit_data
 from flask_login import login_user, logout_user, current_user, login_required
@@ -163,6 +163,19 @@ def edit_account():
         flash('Account updated!')
         return redirect(url_for('home'))
     return render_template('edit_account.html', title='Edit Account', form=form)
+    
+@app.route("/forget_password", methods=['GET', 'POST'])
+def forget_password():
+    form = ForgetPassword()
+    if form.validate_on_submit():
+        email = form.email.data
+        password = form.password.data
+        hashed = bcrypt.generate_password_hash(password).decode('utf-8')
+        user_from_db = db.session.query(users).filter_by(id=current_user.id).update({"email": email, "password": hashed})
+        #db.session.commit()
+        flash('Account updated!')
+        return redirect(url_for('home'))
+    return render_template('forget_password.html', title='Forget Password', form=form)
 
 
 @app.route("/logout")
