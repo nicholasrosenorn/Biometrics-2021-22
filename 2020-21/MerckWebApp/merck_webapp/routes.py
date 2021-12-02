@@ -164,7 +164,7 @@ def edit_account():
         return redirect(url_for('home'))
     return render_template('edit_account.html', title='Edit Account', form=form)
     
-@app.route("/forget_password", methods=['GET', 'POST'])
+@app.route("/forget_password_email", methods=['GET', 'POST'])
 def forget_password():
     form = ForgetPassword()
     if form.validate_on_submit():
@@ -175,7 +175,7 @@ def forget_password():
         #db.session.commit()
         flash('Account updated!')
         return redirect(url_for('home'))
-    return render_template('forget_password.html', title='Forget Password', form=form)
+    return render_template('forget_password_email.html', title='Forget Password', form=form)
 
 
 @app.route("/logout")

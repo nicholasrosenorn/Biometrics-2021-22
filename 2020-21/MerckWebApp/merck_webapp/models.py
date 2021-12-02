@@ -22,7 +22,8 @@ class patient(db.Model):
     date_of_birth = db.Column(db.Date(), unique=False, nullable=False)
     height_cm = db.Column(db.Integer, unique=False, nullable=False)
     purpose = db.Column(db.String(50), unique=False, nullable=False)
-    image = db.Column(db.String(255), unique=False, nullable=False)
+    image = db.Column(db.LargeBinary(), unique=False, nullable=False)
+    #image = db.Column(db.String(255), unique=False, nullable=False)
 
     #Test print
     def __repr__(self):
