@@ -19,8 +19,9 @@ function App() {
         <div id="main-screen">
             <header>
                 <h3>
-                    <IoIosArrowBack /> Back to experiements
+                    <IoIosArrowBack size={"1.5rem"} /> Back to experiements
                 </h3>
+                <img src="https://www.merck.com/wp-content/themes/mhh-merck-mco-theme/images/site-logo.svg" />
             </header>
             <main id="main-screen-content">
                 <h1>{sorted_instructions[instructionNumber]}</h1>
