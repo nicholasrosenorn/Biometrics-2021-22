@@ -1,0 +1,15 @@
+#main-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#main-screen-content {
+    margin: 5em;
+}
+
+#main-screen-footer {
+    display: flex;
+    justify-content: space-between;
+}
