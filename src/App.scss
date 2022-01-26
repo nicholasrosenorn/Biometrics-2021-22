@@ -1,15 +1,44 @@
+$accent: #007a73;
+
 #main-screen {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    #main-screen-content {
+        margin: 5em;
+        align-self: center;
+    }
+
+    #main-screen-footer {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-#main-screen-content {
-    margin: 5em;
-}
-
-#main-screen-footer {
+#modal {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+
+    #buttons {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        #continue-button {
+            background-color: $accent;
+            color: white;
+        }
+    }
 }

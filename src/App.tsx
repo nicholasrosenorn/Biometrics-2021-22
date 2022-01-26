@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "./App.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import instructions from "./instructions.json";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 function App() {
     const [instructionNumber, setInstructionNumber] = useState(0);
+    const [showModal, setShowModal] = useState(false);
 
     const raw_data = instructions.instructions;
     let sorted_instructions = [...raw_data]
@@ -25,7 +29,7 @@ function App() {
                 {instructionNumber > 0 ? (
                     <IoIosArrowBack
                         onClick={() => {
-                            setInstructionNumber(instructionNumber - 1);
+                            setInstructionNumber((instructionNumber) => instructionNumber - 1);
                         }}
                         size={"5em"}
                     />
@@ -36,7 +40,7 @@ function App() {
                 {instructionNumber < sorted_instructions.length - 1 ? (
                     <IoIosArrowForward
                         onClick={() => {
-                            setInstructionNumber(instructionNumber + 1);
+                            setShowModal(true);
                         }}
                         size={"5em"}
                     />
@@ -44,6 +48,27 @@ function App() {
                     <IoIosArrowForward color="grey" size={"5em"} />
                 )}
             </footer>
+            <Modal isOpen={showModal} id="modal">
+                <h1>Confirm that you have completed the instruction</h1>
+                <div id="buttons">
+                    <button
+                        onClick={() => {
+                            setShowModal(false);
+                        }}
+                    >
+                        Go Back
+                    </button>
+                    <button
+                        onClick={() => {
+                            setShowModal(false);
+                            setInstructionNumber(instructionNumber + 1);
+                        }}
+                        id="continue-button"
+                    >
+                        Continue
+                    </button>
+                </div>
+            </Modal>
         </div>
     );
 }
