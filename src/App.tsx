@@ -52,7 +52,7 @@ function App() {
         <>
             {browserSupportsSpeechRecognition ? (
                 <div id="main-screen">
-                    <>{transcript}</>
+                    {/* <>{transcript}</> */}
                     <header>
                         <h3>
                             <IoIosArrowBack size={"1.5rem"} /> Back to experiements
