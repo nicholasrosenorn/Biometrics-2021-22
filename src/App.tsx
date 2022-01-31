@@ -31,8 +31,12 @@ function App() {
             command: "back",
             callback: () => {
                 console.log("back");
-                if (instructionNumber > 0) {
-                    setInstructionNumber(instructionNumber - 1);
+                if (showModal == false) {
+                    if (instructionNumber > 0) {
+                        setInstructionNumber(instructionNumber - 1);
+                    }
+                } else {
+                    setShowModal(false);
                 }
             },
         },
