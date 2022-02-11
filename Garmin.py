@@ -21,6 +21,64 @@ def log_in():
     api = Garmin("nrosenor@purdue.edu", "Garmin!1")
     api.login()
 
+#example
+name = get_full_name()
+name = api.get_full_name()
+
+#connect to Garmin API
+def connectToGarmin(email, password):
+    # Configure debug logging
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
+
+    today = datetime.date.today()
+    lastweek = today - datetime.timedelta(days=7)
+    
+    api = Garmin(email, password)
+    api.login()
+
+    return api
+
+#getHeartRate - @ TOM
+def heartRate(api):
+    resting_hr = api.get_rhr_day(today.isoformat())
+    hr = api.get_heart_rates(today.isoformat())
+
+    #investigate how hr is formatted
+
+    #engineer data so that is is in a format that you like
+
+    # return that data - pandas df
+    return
+
+# connect to dB - "how to connect to external dB using SQL Lite" - @DHRUV
+def connectToDb(): 
+    # SQL Lite - connect to AWS RDS through endpoint from harshini
+
+    # return SQL Lite object that represent a connect top dB
+    return
+
+# function for POSTing to dB
+def postToDB(data, connector):
+    #simple post request
+    
+    # empty return
+    return 
+
+
+def main():
+    # get heart rate from function above
+    hr_df = heartRate()
+
+    # connect to dB using function above
+    connector = connectToDb()
+
+    postToDB()
+
+main()
+
+
+
 def get_full_name():
     full_name = logger.info(api.get_full_name())
 
@@ -214,3 +272,8 @@ except (
         GarminConnectTooManyRequestsError,
     ) as err:
     logger.error("Error occurred during Garmin Connect communication: %s", err)
+
+'''
+Date | resting Heart Rate | Heart Rate | ......
+2/11/22         10              8           
+'''
