@@ -1,5 +1,11 @@
 # merk-experiment-assistant-frontend
 
+Resources:
+For css inspiration: https://github.com/kevquirk/simple.css/blob/main/simple.css
+For flexbox guide: https://flexbox.malven.co/
+For Icons: https://react-icons.github.io/react-icons/
+For Modal: https://github.com/reactjs/react-modal
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
