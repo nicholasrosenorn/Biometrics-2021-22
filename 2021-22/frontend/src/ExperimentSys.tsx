@@ -5,10 +5,14 @@ import instructions from "./instructions.json";
 import Modal from "react-modal";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import { ListenOptions } from "net";
+import { useParams } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
 function App() {
+    const params = useParams();
+    const experimentId = params.experimentId;
+
     const [instructionNumber, setInstructionNumber] = useState(0);
     const [showModal, setShowModal] = useState(false);
 
