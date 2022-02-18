@@ -16,10 +16,11 @@ function CreateExp() {
 
   return (
     <div>
-      <header>
+      <header className="flex-row">
           <h3>
               <IoIosArrowBack size={"1.5rem"} /> Back to Home
           </h3>
+
           <img
               src="https://www.merck.com/wp-content/themes/mhh-merck-mco-theme/images/site-logo.svg"
               alt="Merck logo"

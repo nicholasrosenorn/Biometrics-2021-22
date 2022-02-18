@@ -12,6 +12,14 @@
 
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
