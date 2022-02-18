@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ExperimentSys.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import instructions from "./instructions.json";
@@ -45,6 +45,16 @@ function App() {
             },
         },
     ];
+
+    useEffect(() => {
+        browserSupportsSpeechRecognition &&
+            (() =>
+                setTimeout(() => {
+                    var msg = new SpeechSynthesisUtterance();
+                    msg.text = sorted_instructions[instructionNumber];
+                    window.speechSynthesis.speak(msg);
+                }, 2500))();
+    }, [instructionNumber]);
 
     const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } =
         useSpeechRecognition({ commands });
