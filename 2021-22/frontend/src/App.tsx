@@ -1,10 +1,8 @@
 import React from "react";
-import ExperimentSys from "./ExperimentSys";
+import ExperimentSys from "./components/experiment_sys";
+import ViewPastRuns from "./components/view_past_runs";
 
 export default () => {
-    return (
-        // <div>
-        <ExperimentSys />
-        // </div>
-    );
+    // return <ExperimentSys />;
+    return <ViewPastRuns />;
 };

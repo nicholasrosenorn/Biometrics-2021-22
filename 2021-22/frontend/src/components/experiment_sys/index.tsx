@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./ExperimentSys.scss";
+import "./index.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import instructions from "./instructions.json";
+import instructions from "../../instructions.json";
 import Modal from "react-modal";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import { ListenOptions } from "net";
