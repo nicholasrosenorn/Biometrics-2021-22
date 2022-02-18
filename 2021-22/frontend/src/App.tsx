@@ -13,6 +13,12 @@ export default () => {
             <Route path=":experimentId" element={<ExperimentSys />}>
                 {/* <Route path="new" element={} /> */}
             </Route>
+            <Route path="/" element={<Home />}>
+                {/* <Route path="new" element={} /> */}
+            </Route>
+            <Route path="create" element={<CreateExp />}>
+                {/* <Route path="new" element={} /> */}
+            </Route>
         </Routes>
     );
 };
