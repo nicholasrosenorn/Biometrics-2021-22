@@ -44,14 +44,10 @@ function App() {
             Create New Experiment
           </button>
         </div>
-        <ul
-          role="list"
-          className="experiment-list stack-large stack-exception"
-          aria-labelledby="list-heading"
-        >
+        <div className="flexbox-column">
             <HomeExpView />
             <HomeExpView />
-        </ul>
+        </div>
       </div>
     </>
   )

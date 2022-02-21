@@ -16,7 +16,7 @@ function CreateExp() {
 
   return (
     <div>
-      <header className="flex-row">
+      <header className="flex-row-main">
           <h3>
               <IoIosArrowBack size={"1.5rem"} /> Back to Home
           </h3>

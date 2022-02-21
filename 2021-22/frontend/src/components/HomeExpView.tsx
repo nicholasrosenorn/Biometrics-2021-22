@@ -7,7 +7,7 @@ function HomeExpView() {
   return (
     <div className="flexbox-pillar">
       <div className="flexbox-container">
-        <label>
+        <label className="text_cntr">
           Experiment Title Here
         </label>
         <button className="btn btn_mini">
