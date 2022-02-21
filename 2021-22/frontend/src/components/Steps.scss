@@ -9,6 +9,12 @@
 .flexbox-pillar {
     display: flex;
     flex-direction: column;
-    padding: 5px;
-    background-color: #EEEEEE
+    padding: 2px;
+    margin: 1rem;
+    background-color: #EEEEEE;
+}
+
+.recording {
+  background-color: #EDEDED;
+  margin: 0.5rem;
 }
