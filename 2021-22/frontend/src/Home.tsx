@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.scss'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import HomeExpView from "./components/HomeExpView";
 
 //this function creates the home page
 function App() {
@@ -34,13 +35,12 @@ function App() {
       <div className="home stack-large">
         <h1>Dashboard</h1>
 
-        <div className="flexbox-container">
+        <div className="flex">
           <h2 id="list-heading" className='space'>
             View All Experiments
           </h2>
 
-
-          <button className="btn btn__primary btn__lg">
+          <button className="btn btn__lg">
             Create New Experiment
           </button>
         </div>
@@ -49,8 +49,8 @@ function App() {
           className="experiment-list stack-large stack-exception"
           aria-labelledby="list-heading"
         >
-          // This is where the experiments will be listed (using a component)
-
+            <HomeExpView />
+            <HomeExpView />
         </ul>
       </div>
     </>

@@ -1,3 +1,7 @@
+.btn_mini {
+  width: 10%;
+}
+
 .flexbox-container {
     display: flex;
     flex-direction: row;
@@ -14,13 +18,4 @@
     padding: 2px;
     margin: 1rem;
     background-color: #EEEEEE;
-}
-
-.recording {
-  background-color: #EDEDED;
-  margin: 0.5rem;
-}
-
-.btn__primary {
-  width: 12%;
 }
