@@ -2,6 +2,8 @@
   background-color: #EEEEEE;
   margin: 1rem;
   padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .flexbox-pillar {
@@ -13,8 +15,11 @@
 
 .recording {
   background-color: #EDEDED;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
 }
 
 .btn__add {
-  width: 12%;
+  width: 15%;
 }

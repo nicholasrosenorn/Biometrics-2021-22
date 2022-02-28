@@ -40,11 +40,23 @@ function App() {
             View All Experiments
           </h2>
 
-          <button className="btn btn__lg">
-            Create New Experiment
-          </button>
+          <div className="div-row">
+            <strong>
+              Create a New Experiment:
+            </strong>
+
+            <button className="btn btn__lg">
+              From Scratch
+            </button>
+
+            <button className="btn btn__lg">
+              From a Template
+            </button>
+          </div>
         </div>
         <div className="flexbox-column">
+            <HomeExpView />
+            <HomeExpView />
             <HomeExpView />
             <HomeExpView />
         </div>

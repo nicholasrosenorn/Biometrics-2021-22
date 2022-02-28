@@ -13,7 +13,9 @@
     color: white;
 }
 
-h1,
+h1 {
+  padding-top: 2rem;
+}
 h2 {
   margin-bottom: 0;
 }
@@ -23,14 +25,14 @@ ul {
 }
 
 .stack-large > * + * {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
   .stack-large > * + * {
-    margin-top: 2.8rem;
+    margin-top: 1rem;
   }
 }
 .stack-exception {
@@ -66,6 +68,14 @@ ul {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+}
+
+.div-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%
 }
 
 .btn {
