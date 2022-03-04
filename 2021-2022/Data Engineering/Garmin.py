@@ -32,16 +32,19 @@ def heartRate(api, today):
     #investigate how hr is formatted
     #Before Friday, get the username and return(connecttoGarmin)
     #engineer data so that is is in a format that you like
-
+    print(hr)
     # return that data - pandas df
     return hrs
 
 def main():
-    api, today, lastweek = connectToGarmin("nrosenor@purdue.edu", "Garmin!1")
+    api, today, lastweek, full_name = connectToGarmin("nrosenor@purdue.edu", "Garmin!1")
     # get heart rate from function above
     hr_df = heartRate(api, today)
+    print(lastweek)
+    print(full_name)
     print(hr_df)
-
+    
+    # {'userProfilePK': 94987116, 'calendarDate': '2022-03-04', 'startTimestampGMT': None, 'endTimestampGMT': None, 'startTimestampLocal': None, 'endTimestampLocal': None, 'maxHeartRate': None, 'minHeartRate': None, 'restingHeartRate': None, 'lastSevenDaysAvgRestingHeartRate': None, 'heartRateValueDescriptors': None, 'heartRateValues': None}
     # connect to dB using function above
     #connector = connectToDb()
 
