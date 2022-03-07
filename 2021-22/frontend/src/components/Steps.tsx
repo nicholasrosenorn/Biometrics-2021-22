@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './Steps.scss';
-
+import Recording from "./Recording";
 
 function Steps() {
 
@@ -10,14 +10,15 @@ function Steps() {
         Preheat the oven to 450 degrees Farenheit.
       </strong>
       <div className="flexbox-pillar">
-        <label className="recording">
-          Record [Percentage] Reading of [Humidity]
-        </label>
-        <label className="recording">
-          Record [Celcius] Reading of [Oven Temperature]
-        </label>
+        <Recording/>
         <button className="btn btn__add">
           Add Recording Prompt
+        </button>
+        <button className="btn btn__add">
+          Edit Step
+        </button>
+        <button className="btn btn__add">
+          Delete Step
         </button>
       </div>
     </div>

@@ -71,10 +71,11 @@ function App() {
             {browserSupportsSpeechRecognition ? (
                 <div id="main-screen">
                     {/* <>{transcript}</> */}
-                    <header>
+                    <header className="flex-row">
                         <h3>
-                            <IoIosArrowBack size={"1.5rem"} /> Back to experiements
+                            <IoIosArrowBack size={"1.5rem"} /> Back to Home
                         </h3>
+
                         <img
                             src="https://www.merck.com/wp-content/themes/mhh-merck-mco-theme/images/site-logo.svg"
                             alt="Merck logo"

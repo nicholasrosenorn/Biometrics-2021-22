@@ -62,12 +62,38 @@ ul {
     padding: 5px;
 }
 
-.flex-row {
+#main-screen {
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 5px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+        align-items: center;
+        h3 {
+            display: flex;
+            align-items: center;
+            * {
+                padding: 0 0.5rem 0 0.5rem;
+            }
+        }
+        img {
+            max-height: 80%;
+        }
+    }
+
+    #main-screen-content {
+        margin: 5em;
+        align-self: center;
+    }
+
+    #main-screen-footer {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .div-row {

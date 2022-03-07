@@ -16,6 +16,9 @@ function HomeExpView() {
         <button className="btn btn_mini">
           Start
         </button>
+        <button className="btn btn_mini">
+          Delete
+        </button>
       </div>
     </div>
 
