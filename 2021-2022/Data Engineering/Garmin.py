@@ -36,17 +36,20 @@ def heartRate(api, today):
     # return that data - pandas df
     return hrs
 
+
 def main():
+
     api, today, lastweek, full_name = connectToGarmin("nrosenor@purdue.edu", "Garmin!1")
     # get heart rate from function above
     hr_df = heartRate(api, today)
-    print(lastweek)
-    print(full_name)
+    #print(lastweek)
+    #print(full_name)
     print(hr_df)
     
     # {'userProfilePK': 94987116, 'calendarDate': '2022-03-04', 'startTimestampGMT': None, 'endTimestampGMT': None, 'startTimestampLocal': None, 'endTimestampLocal': None, 'maxHeartRate': None, 'minHeartRate': None, 'restingHeartRate': None, 'lastSevenDaysAvgRestingHeartRate': None, 'heartRateValueDescriptors': None, 'heartRateValues': None}
     # connect to dB using function above
     #connector = connectToDb()
+    #userprofilepk, start time gmt, end time gmt, max heart rate, min heart rate, 
 
     #postToDB()
 
