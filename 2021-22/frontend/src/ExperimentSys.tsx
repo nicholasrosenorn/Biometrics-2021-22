@@ -5,7 +5,7 @@ import instructions from "./instructions.json";
 import Modal from "react-modal";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import { ListenOptions } from "net";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
@@ -73,7 +73,9 @@ function App() {
                     {/* <>{transcript}</> */}
                     <header className="flex-row">
                         <h3>
+                            <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <IoIosArrowBack size={"1.5rem"} /> Back to Home
+                            </Link>
                         </h3>
 
                         <img

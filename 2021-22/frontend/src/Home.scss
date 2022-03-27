@@ -1,3 +1,6 @@
+$accent: #007a73;
+$btn_red: #f44336;
+
 .App {
     text-align: center;
 }
@@ -109,6 +112,7 @@ ul {
   border: 0.2rem solid #4d4d4d;
   cursor: pointer;
   text-transform: capitalize;
+  width: 100%;
 }
 
 .home > * {
@@ -140,5 +144,14 @@ ul {
 }
 
 .btn__lg {
-  width: 26%;
+  background-color: $accent;
+  color: white;
+  border: 2px solid $accent;
+  transition-duration: 0.4s;
+}
+
+.btn__lg:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid $accent;
 }

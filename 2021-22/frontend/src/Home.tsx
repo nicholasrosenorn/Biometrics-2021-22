@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './Home.scss'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import HomeExpView from "./components/HomeExpView";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 
 //this function creates the home page
 function App() {
 
   // just a comment
   const [experiments, modifyExperiments] = useState([])
+  const userName = "UserName"
 
   //useEffect(() => {
   //  fetch("/api/qurl").then(data => data.json()).then(data => modifyExperiments(data))
@@ -17,6 +23,8 @@ function App() {
   //  modifyQuestions(experiments)
   //}
 
+  //Welcome, {userName}
+
   //use this below code to get all ExperimentS
   //<NewQuestion updateList={updateList} />
 
@@ -24,7 +32,7 @@ function App() {
     <>
       <header className="flex-row">
           <h3>
-              <IoIosArrowBack size={"1.5rem"} /> Back to Home
+
           </h3>
 
           <img
@@ -45,13 +53,18 @@ function App() {
               Create a New Experiment:
             </strong>
 
-            <button className="btn btn__lg">
-              From Scratch
-            </button>
+            <Link to="/create" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <button className="btn btn__lg">
+                From Scratch
+              </button>
+            </Link>
 
-            <button className="btn btn__lg">
-              From a Template
-            </button>
+            <Link to="/create" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <button className="btn btn__lg">
+                From a Template
+              </button>
+            </Link>
+
           </div>
         </div>
         <div className="flexbox-column">

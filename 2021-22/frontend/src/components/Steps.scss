@@ -1,3 +1,6 @@
+$accent: #007a73;
+$btn_red: #f44336;
+
 .box {
   background-color: #EEEEEE;
   margin: 1rem;
@@ -13,6 +16,39 @@
     justify-content: center;
 }
 
+#modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+
+        button {
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 0.9rem;
+            margin: 0.5rem 0.5rem;
+        }
+    }
+}
+
+.stepText {
+  margin: auto;
+  overflow: visible;
+  width: 50%;
+  border-radius: 0;
+  line-height: 1.01567;
+  font-weight: 300;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .recording {
   background-color: #EDEDED;
   display: flex;
@@ -20,6 +56,50 @@
   flex-direction: column;
 }
 
+.btn_btn {
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+  width: 50%;
+}
+
 .btn__add {
   width: 15%;
+  background-color: $accent;
+  color: white;
+  transition-duration: 0.4s;
+  border: 2px solid $accent;
+}
+
+.btn__add:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid $accent;
+}
+
+.btn_del {
+  width: 15%;
+  background-color: $btn_red;
+  color: white;
+  transition-duration: 0.4s;
+  border: 2px solid $btn_red;
+}
+
+.btn_del:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid $btn_red;
+}
+
+.btn_step {
+  width: 15%;
+  background-color: $accent;
+  color: white;
+  border: 2px solid $accent;
+  transition-duration: 0.4s;
+}
+
+.btn_step:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

@@ -1,8 +1,24 @@
+$accent: #007a73;
+$btn_red: #f44336;
+
 .btn_mini {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border: 2px solid $accent;
+  transition-duration: 0.4s;
+}
+
+.btn_warn {
   width: 10%;
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+  background-color: white;
+  color: black;
+  border: 2px solid $btn_red;
+  transition-duration: 0.4s;
 }
 
 .flexbox-container {
@@ -11,6 +27,7 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+    //margin: 1px;
 }
 
 .text_cntr {
@@ -29,4 +46,14 @@
     padding: 2px;
     margin: 1rem;
     background-color: #EEEEEE;
+}
+
+.btn_mini:hover {
+  background-color: $accent;
+  color: white;
+}
+
+.btn_warn:hover {
+  background-color: $btn_red;
+  color: white;
 }

@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import './CreateExp.scss';
 import Steps from "./components/Steps";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function CreateExp() {
   const [step, setStep] = useState("")
-
 
   //function handleChange(e) {
   //  e.preventDefault();
@@ -18,7 +22,9 @@ function CreateExp() {
     <div>
       <header className="flex-row-main">
           <h3>
-              <IoIosArrowBack size={"1.5rem"} /> Back to Home
+              <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <IoIosArrowBack size={"1.5rem"} /> Back to Home
+              </Link>
           </h3>
 
           <img
@@ -43,7 +49,7 @@ function CreateExp() {
             autoComplete="off"
             //onChange={handleChange}
           />
-          <button type="submit" className="btn">
+          <button type="submit" className="btn_btn">
             Add
           </button>
         </div>

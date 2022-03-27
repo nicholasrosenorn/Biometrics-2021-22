@@ -1,3 +1,5 @@
+$accent: #007a73;
+
 .Create {
   text-align: center;
   padding: 25px;
@@ -66,11 +68,12 @@
   border: 2px solid #000;
 }
 
+
 .btn {
   margin: 25px;
   width: 10%;
   padding: 0.8rem 1rem 0.7rem;
-  background-color: #39837C; /* Green */
+  background-color: $accent;
   overflow: visible;
   border: none;
   color: white;
@@ -84,6 +87,17 @@
   align-items: center;
   padding: 25px;
   justify-content: center;
+}
+
+.btn_btn {
+  margin: 25px;
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+  width: 50%;
+  background-color: $accent;
+  color: white;
 }
 
 #main-screen {
