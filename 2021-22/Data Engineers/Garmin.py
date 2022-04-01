@@ -28,7 +28,7 @@ def heartRate(api, today):
     #print(hr['restingHeartRate'])
     #print(hr['lastSevenDaysAvgRestingHeartRate'])
    #print(resting_hr)
-    hrs = {"maxHeartRate": hr["maxHeartRate"], "minHeartRate": hr["minHeartRate"], "restingHeartRate": hr['restingHeartRate'], "lastSevenDaysAvgRestingHeartRate": hr['lastSevenDaysAvgRestingHeartRate']}
+    hrs = {"User ID": hr["userProfilePK"], "Start Time": hr["startTimestampGMT"], "End Time": hr['endTimestampGMT'], "Max Heart Rate": hr['maxHeartRate'], "Min Heart Rate": hr['minHeartRate']}
     #investigate how hr is formatted
     #Before Friday, get the username and return(connecttoGarmin)
     #engineer data so that is is in a format that you like
